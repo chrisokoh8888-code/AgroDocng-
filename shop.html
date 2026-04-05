@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Ebooks | AgroDoc</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1>AgroDoc</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="shop-hero">
+  <h1>All Ebooks</h1>
+  <p>Step-by-step guides to start and scale profitable agro businesses in Nigeria.</p>
+</section>
+
+<section class="filters">
+  <button onclick="filterCategory('all')">All</button>
+  <button onclick="filterCategory('poultry')">Poultry</button>
+  <button onclick="filterCategory('aquaculture')">Aquaculture</button>
+  <button onclick="filterCategory('processing')">Processing</button>
+  <button onclick="filterCategory('cosmetics')">Cosmetics</button>
+  <button onclick="filterCategory('business')">Business Starters</button>
+</section>
+
+<section class="grid">
+  <!-- Poultry -->
+  <div class="card poultry">
+    <img src="assets/images/poultry.jpg" alt="Poultry Farming Handbook">
+    <h3>Poultry Farming Handbook</h3>
+    <p>Learn setup, feeding & profit strategy</p>
+    <a href="https://selar.co/yourlink1" class="btn-primary">Buy ₦5,000</a>
+  </div>
+
+  <!-- Aquaculture -->
+  <div class="card aquaculture">
+    <img src="assets/images/catfish.jpg" alt="Catfish Farming Guide">
+    <h3>Catfish Farming Guide</h3>
+    <p>Step-by-step guide to profitable fish farming</p>
+    <a href="https://selar.co/yourlink2" class="btn-primary">Buy ₦4,500</a>
+  </div>
+
+  <!-- Processing -->
+  <div class="card processing">
+    <img src="assets/images/cassava.jpg" alt="Cassava Processing">
+    <h3>Cassava Flour & Starch Guide</h3>
+    <p>Turn cassava into profitable products</p>
+    <a href="https://selar.co/yourlink3" class="btn-primary">Buy ₦6,000</a>
+  </div>
+
+  <!-- Cosmetics -->
+  <div class="card cosmetics">
+    <img src="assets/images/shea.jpg" alt="Shea Butter Processing">
+    <h3>Shea Butter Processing</h3>
+    <p>Make cosmetic products from shea butter</p>
+    <a href="https://selar.co/yourlink4" class="btn-primary">Buy ₦5,500</a>
+  </div>
+
+  <!-- Business Starters -->
+  <div class="card business">
+    <img src="assets/images/business.jpg" alt="Agro Business Starter Guide">
+    <h3>Agro Business Starter Guide</h3>
+    <p>Funding, marketing & feasibility for Nigerian entrepreneurs</p>
+    <a href="https://selar.co/yourlink5" class="btn-primary">Buy ₦4,000</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 AgroDoc. All rights reserved.</p>
+  <p><a href="faq.html">FAQs</a> | <a href="contact.html">Contact</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
