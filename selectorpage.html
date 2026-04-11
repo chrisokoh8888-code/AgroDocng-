@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrodoc - Agribusiness Project Plans</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#0b0f1a;
+  color:#fff;
+  text-align:center;
+}
+
+.container {
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+h1 { font-size:36px; }
+p { color:#aaa; }
+
+.btn {
+  background:#00c853;
+  padding:12px 20px;
+  border:none;
+  border-radius:8px;
+  color:#000;
+  font-weight:600;
+  margin:10px;
+  cursor:pointer;
+}
+
+.section {
+  padding:60px 20px;
+}
+
+.result-box {
+  background:#111827;
+  padding:30px;
+  border-radius:12px;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<section class="section">
+<h1>Build a Profitable Agribusiness Project</h1>
+<p>Select your project type and size to get your investor-ready plan</p>
+</section>
+
+<!-- STEP 1 -->
+<section id="step1" class="section">
+<h2>Select Project Type</h2>
+
+<button class="btn" onclick="selectType('Poultry')">🐔 Poultry</button>
+<button class="btn" onclick="selectType('Fish')">🐟 Fish Farming</button>
+<button class="btn" onclick="selectType('Cassava')">🌾 Cassava</button>
+<button class="btn" onclick="selectType('Turmeric')">🌿 Turmeric</button>
+
+</section>
+
+<!-- STEP 2 -->
+<section id="step2" class="section" style="display:none;">
+<h2>Select Project Size</h2>
+
+<button class="btn" onclick="selectSize('small')">🟢 Small Project</button>
+<button class="btn" onclick="selectSize('medium')">🟡 Medium Project</button>
+<button class="btn" onclick="selectSize('large')">🔴 Commercial Project</button>
+
+</section>
+
+<!-- RESULT -->
+<section id="result" class="section" style="display:none;"></section>
+
+<!-- FOOTER -->
+<section class="section">
+<p>© 2026 Agrodoc</p>
+</section>
+
+</div>
+
+<script>
+let selectedType = "";
+
+function selectType(type) {
+  selectedType = type;
+  document.getElementById("step1").style.display = "none";
+  document.getElementById("step2").style.display = "block";
+}
+
+function selectSize(size) {
+  const result = document.getElementById("result");
+  result.style.display = "block";
+
+  let price = "";
+  let title = "";
+  let link = "";
+
+  if (size === "small") {
+    title = "Starter Project Kit";
+    price = "₦14,900";
+    link = "https://selar.co/YOUR_SMALL_LINK";
+  }
+
+  if (size === "medium") {
+    title = "Growth Project Kit";
+    price = "₦39,900";
+    link = "https://selar.co/YOUR_MEDIUM_LINK";
+  }
+
+  if (size === "large") {
+    title = "Investor Project Kit";
+    price = "₦89,900";
+    link = "https://selar.co/YOUR_LARGE_LINK";
+  }
+
+  result.innerHTML = `
+    <div class="result-box">
+      <h2>${title}</h2>
+      <p><strong>${selectedType} Project</strong></p>
+      <h1>${price}</h1>
+
+      <p>Includes:</p>
+      <p>✔ Handbook<br>✔ Feasibility Study<br>✔ Business Plan</p>
+
+      <br>
+      <a href="${link}" class="btn">Start This Project</a>
+    </div>
+  `;
+
+  result.scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
